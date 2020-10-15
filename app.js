@@ -17,13 +17,20 @@ app.use(express.static("public"));
 
 
 
-
+//get Route for Home page
 app.get("/", function(req, res){
   res.render("home", {startingContent: homeStartingContent});
 });
 
+//get Route for Contact page
+app.get("/contact", function(req, res){
+  res.render("contact", {contactContent: contactContent});
+});
 
-
+//get Route for About page
+app.get("/about", function(req, res){
+  res.render("about", {aboutContent: aboutContent});
+});
 
 
 
