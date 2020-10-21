@@ -32,6 +32,11 @@ app.get("/about", function(req, res){
   res.render("about", {aboutContent: aboutContent});
 });
 
+//get Route for Compose page
+app.get("/compose",function(req,res){
+  res.render("compose");
+});
+
 
 
 
