@@ -15,11 +15,12 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-
+var posts=[];
 
 //get Route for Home page
 app.get("/", function(req, res){
   res.render("home", {startingContent: homeStartingContent});
+  console.log(posts);
 });
 
 //get Route for Contact page
@@ -43,6 +44,8 @@ app.post("/compose",function(req,res){
     title: req.body.postTitle,
     content: req.body.postBody
   };
+  posts.push(post);
+  res.redirect("/");
 });
 
 
