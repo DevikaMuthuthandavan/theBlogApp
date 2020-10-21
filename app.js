@@ -37,6 +37,7 @@ app.get("/compose",function(req,res){
   res.render("compose");
 });
 
+
 //console log the postTitle
 app.post("/compose",function(req,res){
   console.log(req.body.postTitle);
