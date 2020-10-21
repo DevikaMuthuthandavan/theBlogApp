@@ -19,8 +19,11 @@ var posts=[];
 
 //get Route for Home page
 app.get("/", function(req, res){
-  res.render("home", {startingContent: homeStartingContent});
-  console.log(posts);
+  res.render("home", {
+    startingContent: homeStartingContent,
+    posts: posts
+    });
+  
 });
 
 //get Route for Contact page
